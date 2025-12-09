@@ -1,0 +1,55 @@
+[
+  {
+    "id": "kal-2024-2025",
+    "slug": "peters-world-calendar-2024-2025",
+    "title": "Peter's Calendar 2024-2025",
+    "priceCents": 2495,
+    "currency": "EUR",
+    "category": "calendar",
+    "image": "/products/calendar-2024-2025.png",
+    "description": "Twelve absurd scenes of Peter for the whole year. High quality print, limited run.",
+    "details": [
+      "A3 size",
+      "Sturdy paper stock",
+      "Printed in EU"
+    ],
+    "specs": {
+      "Size": "297 by 420 mm",
+      "Paper": "250 gsm uncoated",
+      "Binding": "Wire O"
+    },
+    "shipping": "Ships in a protective sleeve and cardboard mailer.",
+    "available": true
+  },
+  {
+    "id": "pillow",
+    "slug": "pillow",
+    "title": "Pillow",
+    "priceCents": 1295,
+    "currency": "EUR",
+    "category": "pillow",
+    "image": "/products/pillow-3.png",
+    "images": [
+      "/products/pillow-3.png"
+    ],
+    "description": "A beautiful Peter pillow with whimsical illustrations. Perfect for adding character to any room.",
+    "details": ["Soft cotton blend", "Machine washable", "40x40 cm"],
+    "specs": { "Size": "40x40 cm", "Material": "Cotton blend" },
+    "shipping": "Ships in a protective bag.",
+    "available": true
+  },
+  {
+    "id": "pc-set-02",
+    "slug": "postcard-set-2",
+    "title": "Postcard Set 2",
+    "priceCents": 1295,
+    "currency": "EUR",
+    "category": "postcards",
+    "image": "/products/poster.jpg",
+    "description": "Another beautiful collection of Peter postcards. Perfect for sending to friends or displaying.",
+    "details": ["Multiple motifs", "Matte finish", "High quality"],
+    "specs": { "Size": "A6", "Paper": "300 gsm" },
+    "shipping": "Ships in a small rigid envelope.",
+    "available": true
+  }
+]
