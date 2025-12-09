@@ -6,7 +6,7 @@ const ADMIN_PASSWORD = 'eP01weFvFuU!'
 
 export async function POST(request: NextRequest) {
   try {
-    const { password } = await request.json()
+    const { password } = await request.json() as { password: string }
 
     if (password === ADMIN_PASSWORD) {
       const response = NextResponse.json({ success: true })
