@@ -2,27 +2,23 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  // TODO: Setup Cloudflare Access for production!
-  // For now, allowing access for testing
-  // IMPORTANT: Enable Cloudflare Access before going live!
-  
-  // Temporarily disabled for setup - ENABLE CLOUDFLARE ACCESS ASAP!
-  return NextResponse.next()
-  
-  /* Uncomment this after setting up Cloudflare Access:
-  
-  const cfAccessJwtAssertion = request.headers.get('cf-access-jwt-assertion')
-  
-  if (process.env.NODE_ENV === 'development') {
+  // Skip auth for login page and API routes
+  if (
+    request.nextUrl.pathname.startsWith('/login') ||
+    request.nextUrl.pathname.startsWith('/api/auth')
+  ) {
     return NextResponse.next()
   }
-  
-  if (!cfAccessJwtAssertion) {
-    return new NextResponse('Unauthorized', { status: 401 })
+
+  // Check if user is authenticated
+  const authCookie = request.cookies.get('admin-auth')
+
+  if (!authCookie || authCookie.value !== 'authenticated') {
+    // Redirect to login page
+    return NextResponse.redirect(new URL('/login', request.url))
   }
-  
+
   return NextResponse.next()
-  */
 }
 
 export const config = {
