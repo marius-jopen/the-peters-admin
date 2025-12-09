@@ -11,3 +11,8 @@ binding = "DB"
 database_name = "peters-world-db"
 database_id = "da7a3766-c37e-4604-b715-11c3cbfbb830"
 
+# R2 Storage for product images
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "product-images"
+
