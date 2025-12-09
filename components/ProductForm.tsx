@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Save, X } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { ImageUpload } from './ImageUpload'
 
 interface ProductFormProps {
   productId?: string
@@ -153,19 +154,10 @@ export function ProductForm({ productId }: ProductFormProps) {
         </div>
 
         {/* Images */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Main Image URL *
-          </label>
-          <input
-            type="text"
-            required
-            value={formData.image}
-            onChange={(e) => setFormData({ ...formData, image: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="/products/image.jpg"
-          />
-        </div>
+        <ImageUpload
+          currentImage={formData.image}
+          onImageChange={(url) => setFormData({ ...formData, image: url })}
+        />
 
         {/* Description */}
         <div>
